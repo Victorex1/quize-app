@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     color: rgb(42, 41, 41);
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body{
@@ -13,6 +13,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    
+
 }
 
 .app{
@@ -20,11 +22,12 @@ body{
     background-color: #fff;
     border-radius: 6px;
     padding: 16px;
+    
 }
-.app h2{
+.app h3{
     font-size: 30px;
     color: rgb(42, 41, 41);
-    border-bottom: 2px solid;
+    border-bottom: 1px solid #21212185;
     padding: 10px 0;
 }
 
@@ -36,11 +39,11 @@ body{
 .quize .set{
     display: block;
     width: 100%;
-    height: 40px;
+    min-height: 40px;
     margin: 15px 0;
     text-align: left;
     cursor: pointer;
-    padding: 12px;
+    padding: 6px;
     outline: none;
     border: 1px solid;
     border-radius: 5px;
@@ -68,7 +71,6 @@ body{
    outline: none;
    border-radius: 4px;
    cursor: pointer;
-   
 
 }
 
@@ -78,6 +80,47 @@ body{
 
 .incorrect{
     background-color: rgb(246, 68, 68);
+}
+
+.testing{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    padding: auto;
+    display: flex;
+    border-radius: 50%;
+
+}
+.inner{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin:auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner::after{
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    height: 40px;
+    width: 15px;
+    animation: rotate 3s ease infinite;
+}
+
+@keyframes rotate {
+    0%,100%{
+        transform: rotateZ(0);
+    }
+    50%{
+        transform: rotateZ(360deg);
+
+    }
 }
 
 @media screen  and (max-width:550px){
